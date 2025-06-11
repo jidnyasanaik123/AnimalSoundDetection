@@ -1,4 +1,7 @@
-# 📚 OVERVIEW
+# 🌟 SpacECE India Foundation – Internship  
+## 📌 Project 2: Animal Name Sound Recognition for Children
+
+## 📚 OVERVIEW
 This project was developed as part of my internship and focuses on creating an interactive educational platform for children (ages 3–8) to learn animal names, sounds, and characteristics. The app also includes games, alphabet learning, number guessing, and math practice modules — making learning fun and interactive.
 
 ## 🐶 Animal Sound Recognition App
@@ -19,10 +22,10 @@ This project was developed as part of my internship and focuses on creating an i
 - Bridges tech with inclusive, child-friendly learning.
 
 ## 🚀 Getting Started
-1. Clone the repository:
+### 1. Clone the repository:
    git clone https://github.com/yourusername/animal-sound-app.git
    cd animal-sound-app
-2. Install dependencies:
+### 2. Install dependencies:
    pip install -r requirements.txt
-3. Run the app:
+### 3. Run the app:
    streamlit run final1.py   
