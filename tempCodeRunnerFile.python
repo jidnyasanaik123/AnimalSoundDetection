@@ -1,0 +1,39 @@
+import streamlit as st
+from PIL import Image
+
+# Title of the app
+st.title("Animal Characteristics")
+
+# Upload or display an image of the animal (can be static or uploaded)
+uploaded_image = st.file_uploader("Upload an animal image", type=["jpg", "png", "jpeg"])
+
+if uploaded_image is not None:
+    animal_image = Image.open(uploaded_image)
+    st.image(animal_image, caption="Uploaded animal image")
+
+else:
+    # Default Image if no upload is made (for example, a cow image)
+    default_image = Image.open("C:\\Users\\lenovo\\Pictures\\cow.jpg")
+    st.image(default_image, caption="Cow - Click on characteristics below")
+
+# Predefined characteristics data (can be replaced by AI model results)
+animal_characteristics = {
+    "Color": "Cows typically have white, black, or brown coats.",
+    "Size": "Cows can weigh between 1,000 to 1,800 pounds.",
+    "Habitat": "Cows are commonly found in farms and grassy fields.",
+    "Diet": "Cows are herbivores and primarily eat grass and hay.",
+    "Behavior": "Cows are social animals and often form close bonds with other cows."
+}
+
+# Buttons for each characteristic
+characteristic = st.radio(
+    "Click on a characteristic to learn more:",
+    options=["Color", "Size", "Habitat", "Diet", "Behavior"]
+)
+
+# Display the information based on the selected characteristic
+if characteristic:
+    st.subheader(f"{characteristic}:")
+    st.write(animal_characteristics[characteristic])
+
+# You can add AI functionality here to fetch dynamic data, such as a model or API that fetches info about animals.
